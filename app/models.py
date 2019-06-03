@@ -45,17 +45,17 @@ class Role(db.Model):
 
     def __repr__(self):
         return f'User {self.name}'
-# class Comment(db.Model):
-#     __tablename__='comments'
+class Comment(db.Model):
+    __tablename__='comments'
 
-#     id = db.Column(db.Integer,primary_key=True)
-#     comment_content = db.Column(db.String())
-#     post_id = db.Column(db.Integer,db.ForeignKey('post.id'))
-#     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+    id = db.Column(db.Integer,primary_key=True)
+    comment_content = db.Column(db.String())
+    post_id = db.Column(db.Integer,db.ForeignKey('post.id'))
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
 
 
-#     def __repr__(self):
-#         return f'{self.comment}'
+    def __repr__(self):
+        return f'{self.comment}'
 
 # class Blogpost(db.Model):
 #     __tablename__='post'
