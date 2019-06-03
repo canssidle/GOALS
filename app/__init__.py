@@ -14,16 +14,16 @@ mail = Mail()
 
 bootstrap = Bootstrap()
 
-# db = SQLAlchemy()
-# photos = UploadSet('photos',IMAGES)
-# def create_app(config_name):
-#     app = Flask(__name__)
-#     app.debug = True
-#     app.config.from_object(config_options[config_name])
-#     app.config.update(dict(
-#     SECRET_KEY='canssy'
-#     # WTF_CSRF_SECRET_KEY= "a csrf secret key"
-# ))
+db = SQLAlchemy()
+photos = UploadSet('photos',IMAGES)
+def create_app(config_name):
+    app = Flask(__name__)
+    app.debug = True
+    app.config.from_object(config_options[config_name])
+    app.config.update(dict(
+    SECRET_KEY='canssy'
+    # WTF_CSRF_SECRET_KEY= "a csrf secret key"
+))
 #     # Initializing flask extensions
 #     db.init_app(app)
 #     bootstrap = Bootstrap(app)
