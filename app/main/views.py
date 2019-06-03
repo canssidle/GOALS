@@ -46,18 +46,18 @@ def update_pic(uname):
         db.session.commit()
     return redirect(url_for('main.profile',uname=uname))
 
-# @main.route('/about')
-# def about():
-#     return render_template('about.html')
-# @main.route('/subscribe')
-# def subscribe():
-#     return render_template('subscribe.html')
+@main.route('/about')
+def about():
+    return render_template('about.html')
+@main.route('/subscribe')
+def subscribe():
+    return render_template('subscribe.html')
 
-# @main.route('/post/<int:post_id>')
-# def post(post_id):
-#     post = Blogpost.query.filter_by(id=post_id).one()
+@main.route('/post/<int:post_id>')
+def post(post_id):
+    post = Blogpost.query.filter_by(id=post_id).one()
 
-#     return render_template('post.html', post=post)
+    return render_template('post.html', post=post)
 
 # @main.route('/add')
 # def add():
