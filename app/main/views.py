@@ -11,11 +11,11 @@ def index():
     posts = Blogpost.query.order_by(Blogpost.date_posted.desc()).all()
 
     return render_template('index.html', posts=posts)
-# @main.route('/user/<uname>')
-# def profile(uname):
-#     user = User.query.filter_by(username = uname).first()
+@main.route('/user/<uname>')
+def profile(uname):
+    user = User.query.filter_by(username = uname).first()
 
-#     return render_template("profile/profile.html", user = user)
+    return render_template("profile/profile.html", user = user)
 
 # @main.route('/user/<uname>/update',methods = ['GET','POST'])
 # @login_required
