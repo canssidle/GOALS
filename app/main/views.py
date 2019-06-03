@@ -1,16 +1,16 @@
-# from flask import Flask
-# from . import main
-# from datetime import datetime
-# from flask import render_template, request, redirect, url_for, abort, flash
-# from flask_login import login_required
-# from ..models import User, Blogpost, Comment
-# from .forms import UpdateProfile, BlogForm , CommentForm
-# from .. import db, photos
-# @main.route('/')
-# def index():
-#     posts = Blogpost.query.order_by(Blogpost.date_posted.desc()).all()
+from flask import Flask
+from . import main
+from datetime import datetime
+from flask import render_template, request, redirect, url_for, abort, flash
+from flask_login import login_required
+from ..models import User, Blogpost, Comment
+from .forms import UpdateProfile, BlogForm , CommentForm
+from .. import db, photos
+@main.route('/')
+def index():
+    posts = Blogpost.query.order_by(Blogpost.date_posted.desc()).all()
 
-#     return render_template('index.html', posts=posts)
+    return render_template('index.html', posts=posts)
 # @main.route('/user/<uname>')
 # def profile(uname):
 #     user = User.query.filter_by(username = uname).first()
