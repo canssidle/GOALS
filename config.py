@@ -17,12 +17,12 @@ class ProdConfig(Config):
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://canssidle:judycharles@localhost/myblog_test'
 
-# class DevConfig(Config):
-#     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://canssidle:judycharles@localhost/myblog'
-#     DEBUG = True
+class DevConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://canssidle:judycharles@localhost/myblog'
+    DEBUG = True
 
-# config_options = {
-# 'development':DevConfig,
-# # 'production':ProdConfig,
-# 'test':TestConfig
-# }
+config_options = {
+'development':DevConfig,
+# 'production':ProdConfig,
+'test':TestConfig
+}
