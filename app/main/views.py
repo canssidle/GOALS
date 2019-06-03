@@ -84,18 +84,6 @@ def addpost():
 @login_required
 def new_comment(id):
     form = CommentForm()
-@main.route('/about')
-def about():
-    return render_template('about.html')
-@main.route('/subscribe')
-def subscribe():
-    return render_template('subscribe.html')
-
-@main.route('/post/<int:post_id>')
-def post(post_id):
-    post = Blogpost.query.filter_by(id=post_id).one()
-
-    return render_template('post.html', post=post)
 
     if form.validate_on_submit():
 

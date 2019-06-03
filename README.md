@@ -1,90 +1,44 @@
-<!-- # perfect-blog
+# MY PERSONAL BLOG.
++ This app allows one to write their own blog.The users who have subscribed are able to view the writer's blog and even write a commet about it.The writer can also write a new blog or even edit their previous blogs.
+#### By **Canssidle** 
+
+## Description
+
++ This Application is python based and runs on any browser, It allows a user to view and comment posts on my blog, for a writter can also register and start posting posts that will be commented by other users, the user can also subscribe to the app to be informed of a new post via their email, a writter can publish new posts, comment them, delete posts and comments on the posts he/she created.
 
 
-By abdirahman mahat
++ ## Bugs
 
-## Specifications
++ Everything
 
-[SPECS.md](https://github.com/abdirahman-mahat/perfect-blog//master/specs.md)
-
-### Set-UP and Installation
-This project was created on a debian linux platform but should work on other unix based[not limited to] sytems.
-
-* Python 3.6
-
-### Cloning the repository
-
-```git clone https://github.com/abdirahman-mahat/Perfect-blog.git```
+### prerequisites
++ First clone the project to your camputer. ```git clone <repo url>```
++ Ensure python3 is installed.
++ Install virtual environment by running ```pip3 install virtualenv```
++ Create a virtualenvironment by running ``` virtualenv <name of environment>``` on the terminal and once its activated by running ``` source <name of environment>/bin/activate``` then install all the packages by running ```pip3 install -r requirements.txt```
++ Then start the server by running ```python3 manage.py runserver```.
++ Copy the link and paste in any browser ```http://localhost:5000```
 
 
-### Database migrations
+## Technology and Tools Used
 
-```bash
-# first initialize the database if the migrations folder does not exist
-python manage.py db init
-# create  a migration
-python manage.py db migrate -m "initial migration"
-# upgrade
-python manage.py db upgrade
-# insert initial data
-python manage.py insert_initial_data
-```
++ Python3.6 - Programming language
++ Flask - Python framework
++ Git - Version control
++ Visual Studio - Code editor
 
-### Installing dependencies
+## Further help
++ To get Further help you can visit the official [python](https://www.python.org/) and [flask](http://flask.pocoo.org/ ) documentation.
 
-```
-pip3 install -r requirements
-```
+## Technology and Tools Used
 
-### Prepare environmet variables
++ Python3.6 - Programming language
++ Flask - Python framework
++ Git - Version control
++ Visual Studio - Code editor
 
-In start.sh file, in the root folder
+## Further help
++ To get Further help you can visit the official [python](https://www.python.org/) and [flask](http://flask.pocoo.org/ ) documentation.
 
-```bash
- export MAIL_USERNAME=YOUR EMAIL
- export MAIL_PASSWORD=EMAIL PASSWORD
-```
-
-
-
-### Creating a virtual environment
-
-```
-python3.6 -m virtualenv virtual
-source virtual/bin/activate
-```
-### Running Tests
-
-```bash
-python3.6 manage.py test
-```
-
-
-# Known Bugs
-No bugs known.
-
-## Live Demo
-
-The web app can be accessed from the following link
-[click here](https://perfect-blog.herokuapp.com/)
-
-
-## Technology used
-
-* [Python3.6](https://www.python.org/)
-
-* [Flask](http://flask.pocoo.org/)
-
-* [Heroku](https://heroku.com)
-
-* [Bootstrap](https://bootstrapcdn.com)
-
-
-
-
-
-## License
-
-MIT License
-
-&copy;  abdirahman mahat -->
+## Licence
++ MIT (c) 2019 canssidl (https://github.com/canssidle)
