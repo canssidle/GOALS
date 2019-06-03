@@ -1,13 +1,13 @@
-# from flask_wtf import FlaskForm
-# from wtforms import StringField, TextAreaField, SubmitField
+from flask_wtf import FlaskForm
+from wtforms import StringField, TextAreaField, SubmitField
 
-# class BlogForm(FlaskForm):
+class BlogForm(FlaskForm):
 
-#     title = StringField('title')
-#     subtitle= StringField('subtitle')
-#     content = TextAreaField('blog content...')
-#     author= StringField('author')
-#     submit = SubmitField('Post')
+    title = StringField('title')
+    subtitle= StringField('subtitle')
+    content = TextAreaField('blog content...')
+    author= StringField('author')
+    submit = SubmitField('Post')
 
 
 # class CommentForm(FlaskForm):
