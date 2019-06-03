@@ -1,0 +1,3 @@
+Hello {{user.username}}
+Welcome to My Blog!
+You have just been registered as an admin for the website and have access to certain priviledges.

@@ -1,0 +1,3 @@
+Hello {{user.username}}
+Welcome to myBlog
+THanks for joining my community.
