@@ -24,13 +24,13 @@ def create_app(config_name):
     SECRET_KEY='canssy'
     # WTF_CSRF_SECRET_KEY= "a csrf secret key"
 ))
-#     # Initializing flask extensions
-#     db.init_app(app)
-#     bootstrap = Bootstrap(app)
-#     login_manager.init_app(app)
-#     db.init_app(app)
-#     login_manager.init_app(app)
-#     mail.init_app(app)
+    # Initializing flask extensions
+    db.init_app(app)
+    bootstrap = Bootstrap(app)
+    login_manager.init_app(app)
+    db.init_app(app)
+    login_manager.init_app(app)
+    mail.init_app(app)
    
 #     from .main import main as main_blueprint
 #     app.register_blueprint(main_blueprint)
