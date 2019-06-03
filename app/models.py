@@ -20,9 +20,9 @@ class User(UserMixin,db.Model):
     post = db.relationship('Blogpost',backref='user',lazy='dynamic')
     comments = db.relationship('Comment', backref = 'comment', lazy= "dynamic")
     role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))
-#     @property
-#     def password(self):
-#         raise AttributeError('You cannot read the password attribute')
+    @property
+    def password(self):
+        raise AttributeError('You cannot read the password attribute')
 
 #     @password.setter
 #     def password(self, password):
