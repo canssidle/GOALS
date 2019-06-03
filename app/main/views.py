@@ -59,31 +59,43 @@ def post(post_id):
 
     return render_template('post.html', post=post)
 
-# @main.route('/add')
-# def add():
-#     return render_template('add.html')
+@main.route('/add')
+def add():
+    return render_template('add.html')
 
-# @main.route('/addpost', methods=['POST'])
-# def addpost():
-#     title = request.form['title']
-#     subtitle = request.form['subtitle']
-#     author = request.form['author']
-#     content = request.form['content']
+@main.route('/addpost', methods=['POST'])
+def addpost():
+    title = request.form['title']
+    subtitle = request.form['subtitle']
+    author = request.form['author']
+    content = request.form['content']
 
-#     post = Blogpost(title=title, subtitle=subtitle, author=author, content=content, date_posted=datetime.now())
-#     subscribers=Subscriber.query.all()
+    post = Blogpost(title=title, subtitle=subtitle, author=author, content=content, date_posted=datetime.now())
+    subscribers=Subscriber.query.all()
 
-#     for subscriber in subscribers:
-#         mail_message("New Blog Post","email/new_post",subscriber.email,post=new_post)
+    for subscriber in subscribers:
+        mail_message("New Blog Post","email/new_post",subscriber.email,post=new_post)
 
-#     db.session.add(post)
-#     db.session.commit()
+    db.session.add(post)
+    db.session.commit()
 
-#     return redirect(url_for('main.index'))
-# @main.route('/comment/new/<int:id>', methods=['GET','POST'])
-# @login_required
-# def new_comment(id):
-#     form = CommentForm()
+    return redirect(url_for('main.index'))
+@main.route('/comment/new/<int:id>', methods=['GET','POST'])
+@login_required
+def new_comment(id):
+    form = CommentForm()
+@main.route('/about')
+def about():
+    return render_template('about.html')
+@main.route('/subscribe')
+def subscribe():
+    return render_template('subscribe.html')
+
+@main.route('/post/<int:post_id>')
+def post(post_id):
+    post = Blogpost.query.filter_by(id=post_id).one()
+
+    return render_template('post.html', post=post)
 
 #     if form.validate_on_submit():
 
