@@ -97,32 +97,32 @@ def post(post_id):
 
     return render_template('post.html', post=post)
 
-#     if form.validate_on_submit():
+    if form.validate_on_submit():
 
-#         comment_content = form.comment.data
+        comment_content = form.comment.data
 
-#         comment = Comment(comment_content= comment_content,post_id=id)
+        comment = Comment(comment_content= comment_content,post_id=id)
 
-#         db.session.add(comment)
-#         db.session.commit()
+        db.session.add(comment)
+        db.session.commit()
 
-#     comment = Comment.query.filter_by(post_id=id).all()
+    comment = Comment.query.filter_by(post_id=id).all()
       
-#     return render_template('new_comment.html', title='New Post', comment=comment,comment_form=form, post ='New Post')
+    return render_template('new_comment.html', title='New Post', comment=comment,comment_form=form, post ='New Post')
 
-# @main.route('/delete/<int:id>',methods=['GET','POST'])
-# @login_required
-# def delete(id):
-#     del_post = Blogpost.query.filter_by(id=id).first()
-#     db.session.delete(del_post)
-#     db.session.commit()
+@main.route('/delete/<int:id>',methods=['GET','POST'])
+@login_required
+def delete(id):
+    del_post = Blogpost.query.filter_by(id=id).first()
+    db.session.delete(del_post)
+    db.session.commit()
 
-#     return redirect(url_for('main.index'))
-# @main.route('/delet/<int:id>',methods=['GET','POST'])
-# @login_required
-# def delete_comment(id):
-#     delete_comment = Comment.query.filter_by(id=id).first()
-#     db.session.delete(delete_comment)
-#     db.session.commit()
+    return redirect(url_for('main.index'))
+@main.route('/delet/<int:id>',methods=['GET','POST'])
+@login_required
+def delete_comment(id):
+    delete_comment = Comment.query.filter_by(id=id).first()
+    db.session.delete(delete_comment)
+    db.session.commit()
 
-#     return redirect(url_for('main.index'))
+    return redirect(url_for('main.index'))
