@@ -57,16 +57,16 @@ class Comment(db.Model):
     def __repr__(self):
         return f'{self.comment}'
 
-# class Blogpost(db.Model):
-#     __tablename__='post'
-#     id = db.Column(db.Integer, primary_key=True)
-#     title = db.Column(db.String(50))
-#     subtitle = db.Column(db.String(50))
-#     author = db.Column(db.String(20))
-#     date_posted = db.Column(db.DateTime)
-#     content = db.Column(db.Text)
-#     post_id = db.relationship('Comment', backref = 'comments', lazy= "dynamic")
-#     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+class Blogpost(db.Model):
+    __tablename__='post'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50))
+    subtitle = db.Column(db.String(50))
+    author = db.Column(db.String(20))
+    date_posted = db.Column(db.DateTime)
+    content = db.Column(db.Text)
+    post_id = db.relationship('Comment', backref = 'comments', lazy= "dynamic")
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
 # class Subscriber(db.Model):
 #     __tablename__='subscribers'
 
