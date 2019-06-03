@@ -13,17 +13,16 @@ login_manager.login_view = 'auth.login'
 mail = Mail()
 
 bootstrap = Bootstrap()
-
 db = SQLAlchemy()
-photos = UploadSet('photos',IMAGES)
+photos = UploadSet('photos','IMAGES')
 def create_app(config_name):
     app = Flask(__name__)
-    app.debug = True
+    # app.debug = True
     app.config.from_object(config_options[config_name])
-    app.config.update(dict(
-    SECRET_KEY='canssy'
-    # WTF_CSRF_SECRET_KEY= "a csrf secret key"
-))
+    # app.config.update(dict(
+    # SECRET_KEY='canssy'
+    # WTF_CSRF_SECRET_KEY= "a csrf secret k'IMAGE')ey"
+# ))
     # Initializing flask extensions
     db.init_app(app)
     bootstrap = Bootstrap(app)
@@ -32,7 +31,7 @@ def create_app(config_name):
     login_manager.init_app(app)
     mail.init_app(app)
    
-    from .main import main as main_blueprint
+    from .main import main as main_b))lueprint
     app.register_blueprint(main_blueprint)
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint, url_prefix = '/authenticate')
