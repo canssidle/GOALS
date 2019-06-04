@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    SECRET_kEY=os.environ.get('SECRET_kEY')
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://canssidle:judycharles@localhost/myblog'
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
@@ -20,6 +20,8 @@ class TestConfig(Config):
 class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://canssidle:judycharles@localhost/myblog'
     DEBUG = True
+    SECRET_kEY=os.environ.get('SECRET_KEY')
+
 
 config_options = {
 'development':DevConfig,
